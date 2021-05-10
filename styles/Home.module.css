@@ -1,0 +1,14 @@
+.label {
+  color: #2B3172;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 670px;
+  margin: 0 auto;
+}
