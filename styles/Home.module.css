@@ -3,12 +3,26 @@
   font-size: 40px;
   font-weight: bold;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 3fr);
   max-width: 670px;
   margin: 0 auto;
+}
+
+.start_button {
+  background-color: #FDD207;
+  border: none;
+  height: 50px;
+  width: 150px;
+  border-radius: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  margin-left: 100px;
 }

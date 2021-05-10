@@ -23,6 +23,33 @@
     border-bottom: 2px solid #D6D7DA;
 }
 
+.buttons {
+  display: flex;  
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #FDD207;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.input_sec {
+  width: 50px;
+  margin: 0px 5px 0px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .input[type=range] {
     height: 26px;
     -webkit-appearance: none;
