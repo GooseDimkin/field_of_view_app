@@ -9,6 +9,7 @@ import {Provider} from 'react-redux';
 import React from 'react';
 import {withRouter} from 'next/router'
 import Test_page from './Test_page';
+import Logo from './Logo';
 
 class Home extends React.Component {
   onStart = () => {
@@ -19,6 +20,7 @@ class Home extends React.Component {
   render() {
     return(
       <Provider store={store}>
+        <Logo/>
         <div className={styles.label}>Тренажер "Поле зрения"</div>
           <div className={styles.content}>
           <WordsAmountContainer/>

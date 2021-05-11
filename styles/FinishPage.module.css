@@ -1,5 +1,13 @@
 .image {
     max-width: 500px;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 150px;
+}
+
+.text {
+    color: #2B3172;
+    font-weight: bold;
+    font-size: 64px;
+    position: absolute;
+    margin-left: -30px;
 }

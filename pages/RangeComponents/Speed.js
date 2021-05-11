@@ -5,17 +5,17 @@ import {ChangeSpeedAC} from './../../redux/reducers/wordsSettingsReducer';
 
 class Speed extends React.Component {
   increaseValue = () => {
-    if(this.props.speed === 100) {
+    if(this.props.speed === 5) {
       return;
     }
-    return this.props.ChangeSpeedAC(this.props.speed + 1);
+    return this.props.ChangeSpeedAC(this.props.speed + 0.5);
   }
 
   decreaseValue = () => {
     if(this.props.speed === 1) {
       return;
     }
-    return this.props.ChangeSpeedAC(this.props.speed - 1);
+    return this.props.ChangeSpeedAC(this.props.speed - 0.5);
   }
 
   render() {

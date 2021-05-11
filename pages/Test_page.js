@@ -1,6 +1,7 @@
 import store from './../redux/store';
 import React, { useState, useEffect } from 'react';
 import {withRouter} from 'next/router'
+import Logo from './Logo';
 
 let randomIndexes = [];
 let indexOfRandomIndex = -1;
@@ -12,6 +13,7 @@ function Test_page(props) {
         let r = Math.floor(Math.random() * settings_data.wordsAmount);
         if(randomIndexes.indexOf(r) === -1) randomIndexes.push(r);
     }  
+    console.log(randomIndexes);
 
     let all_words = store.getState().wordsData.words;
     let all_needed_words = all_words.map(w => w.length === settings_data.lettersInWords && w);
@@ -41,18 +43,33 @@ function Test_page(props) {
         return props.router.push('/Finish_page')
     }
 
+    let getSpeed = () => {
+        if(settings_data.speed ^ 0 != settings_data.speed || settings_data.speed === 1.5) {
+            settings_data.speed = Math.ceil(settings_data.speed) + '000';
+            settings_data.speed -= 500;
+
+            return settings_data.speed;
+        }
+        else {
+            return settings_data.speed + '000';
+        }
+    }
+
     const [word, setWord] = useState('');
 
     useEffect(() => {
-        const interval = setInterval(() => setWord(word => getWords(randomIndexes[indexOfRandomIndex += 1])), (settings_data.speed) + '000');
+        const interval = setInterval(() => setWord(word => getWords(randomIndexes[indexOfRandomIndex += 1])), getSpeed());
         return () => clearInterval(interval);
     }, []);
 
     return(
-        <div id='space' className='devider'>
-            <div className='word'>{word[0]}</div>
-            ~
-            <div className='word'>{word[1]}</div>
+        <div>
+            <Logo/>
+            <div id='space' className='devider'>
+                <div className='word'>{word[0]}</div>
+                ~
+                <div className='word'>{word[1]}</div>
+            </div>
         </div>
     );
 }

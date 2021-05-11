@@ -15,12 +15,12 @@
 }
 
 .content {
-    background-color: #FFFFFF;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 20px;
-    width: 300px;
-    border-bottom: 2px solid #D6D7DA;
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  width: 300px;
+  border-bottom: 2px solid #D6D7DA;
 }
 
 .buttons {
