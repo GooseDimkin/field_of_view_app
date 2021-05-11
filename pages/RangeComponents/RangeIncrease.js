@@ -16,7 +16,7 @@ function RangeIncrease(props) {
   let onValueInput = () => {
     let currentInputValue = 0;
     for(let i = 0; i < ref.current.value; ++i) {
-      currentInputValue += 5;
+      currentInputValue += 50;
     }
 
     props.ChangeRangeIncreaseAC(currentInputValue);

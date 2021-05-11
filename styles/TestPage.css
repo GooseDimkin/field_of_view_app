@@ -1,3 +1,7 @@
+:root {
+    --space_between: 0px;
+}
+
 .word {
     color: #371548;
     font-weight: bold;
@@ -8,7 +12,7 @@
     color: #371548;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 600px;
+    max-width: var(--space_between);
     margin: 0 auto;
     font-size: 50px;
     padding-top: 400px;

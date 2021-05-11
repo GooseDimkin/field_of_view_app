@@ -1,10 +1,10 @@
-import styles from './../styles/TestPage.module.css';
 import store from './../redux/store';
 import React, { useState, useEffect } from 'react';
 import {withRouter} from 'next/router'
 
 let randomIndexes = [];
 let indexOfRandomIndex = -1;
+
 function Test_page(props) {
     let settings_data = store.getState().wordsSettingsData;
 
@@ -19,15 +19,20 @@ function Test_page(props) {
     let words = [];
     for(let i = 0; i < settings_data.wordsAmount; ++i) {
         words.push(all_needed_words[randomIndexes[i]]);
-    }     
+    }    
+    
+    let space_value = settings_data.startRange;
 
     let getWords = (randomWordId) => {
         if(randomWordId === undefined)
             return exitFoo()
 
+        let space_between_element = document.getElementById('space');
         let word = words[randomWordId]
         let n = Math.ceil(word.length / 2);
         let splittedRandomWord = word.match(new RegExp('.{1,' + n + '}', 'g'));
+        space_value += settings_data.rangeIncrease;
+        space_between_element.style.setProperty('--space_between', space_value + 'px');
 
         return splittedRandomWord;
     }
@@ -44,10 +49,10 @@ function Test_page(props) {
     }, []);
 
     return(
-        <div className={styles.devider}>
-            <div className={styles.word}>{word[0]}</div>
+        <div id='space' className='devider'>
+            <div className='word'>{word[0]}</div>
             ~
-            <div className={styles.word}>{word[1]}</div>
+            <div className='word'>{word[1]}</div>
         </div>
     );
 }

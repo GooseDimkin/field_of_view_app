@@ -13,9 +13,9 @@ function StartRange(props) {
   let ref = React.createRef();
 
   let onValueInput = () => {
-    let currentInputValue = 0;
+    let currentInputValue = 200;
     for(let i = 0; i < ref.current.value; ++i) {
-      currentInputValue += 5;
+      currentInputValue += 50;
     }
 
     props.ChangeStartRangeAC(currentInputValue);

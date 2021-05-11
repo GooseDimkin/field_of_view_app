@@ -6,9 +6,9 @@ const CHANGE_SPEED = 'CHANGE_SPEED';
 
 let initialState = {
     wordsAmount: 6,
-    startRange: 25,
+    startRange: 250,
     lettersInWords: 8,
-    rangeIncrease: 25,
+    rangeIncrease: 250,
     speed: 1
 }
 
