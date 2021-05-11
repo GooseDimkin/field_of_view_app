@@ -1,0 +1,16 @@
+.word {
+    color: #371548;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.devider {
+    color: #371548;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 50px;
+    padding-top: 400px;
+    text-align: center;
+}

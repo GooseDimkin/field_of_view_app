@@ -5,10 +5,10 @@ const CHANGE_RANGE_INCREASE = 'CHANGE_RANGE_INCREASE';
 const CHANGE_SPEED = 'CHANGE_SPEED';
 
 let initialState = {
-    wordsAmount: 1,
-    startRange: 5,
-    lettersInWords: 3,
-    rangeIncrease: 5,
+    wordsAmount: 6,
+    startRange: 25,
+    lettersInWords: 8,
+    rangeIncrease: 25,
     speed: 1
 }
 
